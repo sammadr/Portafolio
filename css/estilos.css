@@ -24,3 +24,7 @@ header{
   font-family: "Rubik Moonrocks", sans-serif;
   color: var(--morado);
 }
+
+.bi{
+  color: var(--violeta);
+}
