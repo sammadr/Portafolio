@@ -1,9 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Moonrocks&display=swap');
+/* @import url(); */
 
-@import url();
+:root{
+  --morado: #3F022A;
+  --violeta: #8C035C;
+  --violeta-claro: #D99AC8;
+  --lila-oscuro: #BF9FB7;
+  --lila: #EEE4F2;
+  --negro: #0D0D0D;
+}
 
 body{
+  /* font-family: "Mochiy Pop P One", sans-serif; */
+  font-family: "Poppins", sans-serif; 
+  height: 4000px;
+}
+
+header{
+  background-color: var(--lila);
+}
+
+.logo{
   font-family: "Rubik Moonrocks", sans-serif;
-  font-family: "Mochiy Pop P One", sans-serif;
-  font-family: "Poppins", sans-serif;
+  color: var(--morado);
 }
