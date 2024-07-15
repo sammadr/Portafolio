@@ -8,6 +8,7 @@
   --lila-oscuro: #BF9FB7;
   --lila: #EEE4F2;
   --negro: #0D0D0D;
+  --blanco: #fff;
 }
 
 body{
@@ -120,9 +121,9 @@ header{
 }
 
 
-.skill-link{
+/* .skill-link{
   color: aqua;
-}
+} */
 
 .skill-container {
   position: relative;
@@ -241,8 +242,141 @@ header{
 }
 
 
+/* Seccion portafolio */
+
+.portafolio{
+  background-color: var(--lila);
+}
+
+.portafolio-titulo{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--violeta);
+  text-transform: uppercase;
+}
+
+.portafolio-subtitulo{
+  font-family: "Mochiy Pop P One", sans-serif;
+  color: var(--morado);
+  font-size: 30px;
+}
 
 
+
+
+
+
+/* filtro */
+
+.botonDom{
+  color: var(--blanco);
+  background-color: var(--violeta);
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 10px;
+}
+
+.botonDom-all{
+  background-color: var(--morado);
+}
+
+
+/*  */
+
+.cards {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards:hover .card-img-top {
+  opacity: 0;
+}
+
+.cards-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--negro);
+  color: var(--blanco);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards:hover .cards-body {
+  opacity: 1;
+}
+
+.card-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  top: 25px; /* Ajusta este valor según sea necesario */
+  z-index: 1;
+}
+
+.cards-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.btn-links {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-link{
+  color: var(--blanco);
+}
+
+.btn-link:hover{
+  color: var(--blanco);
+  transform: scale(1.1);
+}
+
+.card-text {
+  /* Mueve el texto al fondo del contenedor */
+  /* margin-top: auto;  */
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.etiquetas {
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.etiqueta-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--lila);
+  padding: 5px;
+  border-radius: 10rem;
+}
+
+.etiqueta-card img {
+  width: 11px;
+  height: 11px;
+  margin-right: 2px;
+}
+
+.etiqueta-card h4 {
+  margin: 0;
+  font-size: 0.56rem;
+  color: var(--violeta);
+  text-transform: uppercase;
+}
 
 
 
