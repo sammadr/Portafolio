@@ -192,6 +192,11 @@ header{
   /* margin-left: 5px; */
 }
 
+.skills-titulo{
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 20px;
+  color:var(--morado);
+}
 /*  */
 
 
