@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-419">
+<html lang="es-419" data-contexto="cambio-img">
 <head>
   <!-- Configuración del documento -->
   <meta charset="UTF-8">
@@ -135,39 +135,39 @@
             <div class="p-3">
               <div class="skill-container">
                 <img src="assets/icons/html.png" alt="icon html" class="skill img-fluid">
-                <div class="skill-text">HTML</div>
+                <span class="skill-text">HTML</span>
               </div>
               <div class="skill-container">
                 <img src="assets/icons/css.png" alt="icon css" class="skill img-fluid">
-                <div class="skill-text">CSS</div>
+                <span class="skill-text">CSS</span>
               </div>
               <div class="skill-container">
                 <img src="assets/icons/bootstrap.png" alt="icon bootstrap" class="skill img-fluid">
-                <div class="skill-text">Bootstrap</div>
+                <span class="skill-text">Bootstrap</span>
               </div>
               <div class="skill-container">
                 <img src="assets/icons/js.png" alt="icon javaScript" class="skill img-fluid">
-                <div class="skill-text">JavaScript</div>
+                <span class="skill-text">JavaScript</span>
               </div>
               <div class="skill-container">
                 <img src="assets/icons/react.png" alt="icon react" class="skill img-fluid">
-                <div class="skill-text">React</div>
+                <span class="skill-text">React</span>
               </div>
               <div class="skill-container">
                 <img src="assets/icons/mysql.png" alt="icon MySQL" class="skill img-fluid">
-                <div class="skill-text">MySQL</div>
+                <span class="skill-text">MySQL</span>
               </div>
               <div class="skill-container">
                 <img src="assets/icons/git.png" alt="icon git" class="skill img-fluid">
-                <div class="skill-text">Git</div>
+                <span class="skill-text">Git</span>
               </div>
               <div class="skill-container">
                 <img src="assets/icons/github.png" alt="icon github" class="skill img-fluid">
-                <div class="skill-text">GitHub</div>
+                <span class="skill-text">GitHub</span>
               </div>
               <div class="skill-container">
                 <img src="assets/icons/accesibilidad.png" alt="icon accesibilidad" class="skill img-fluid">
-                <div class="skill-text">Accesibilidad</div>
+                <span class="skill-text">Accesibilidad</span>
               </div>
             </div>
           </div>
@@ -180,6 +180,7 @@
     <section class="portafolio d-flex flex-column justify-content-center text-center p-5">
       <h2 class="portafolio-titulo">Portafolia</h2>
       <h3 class="portafolio-subtitulo">Mis trabajos más reciente</h3>
+      
       <!-- filtro -->
       <div class="d-flex justify-content-center text-center gap-2 p-3">
         <div class="divDom">
@@ -275,8 +276,19 @@
     <section class="banners banner-2"></section>
 
     <!-- Sobre mi -->
-    <section class="">
-      
+    <section class="sobre d-flex justify-content-center text-center p-5">
+      <div class="sobre-header d-flex flex-wrap align-items-center">
+        <div class="sobre-container col-12 col-md-4 text-center mb-3 mb-md-0 btn boton-img" data-contexto="cambio-img">
+          <img src="./assets/samma-ia.jpg" alt="" class="img-fluid rounded-circle img-boton">
+          <span class="sobre-text">Haz clic para verme</span>
+        </div>
+        <div class="col-12 col-md-8 sobre-body d-flex flex-column text-md-start text-center">
+          <h2 class="text-uppercase">Sobre mi</h2>
+          <h3 class="">Me llamo Samantha Diaz</h3>
+          <p class="sobre-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores vero laboriosam velit voluptates? Voluptatem voluptates temporibus rerum distinctio rem? Saepe nemo a rem natus sed at ipsum nesciunt ad.</p>
+          <p class="sobre-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores vero laboriosam velit voluptates? Voluptatem voluptates temporibus rerum distinctio rem? Saepe nemo a rem natus sed at ipsum nesciunt ad.</p>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -292,6 +304,6 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
     crossorigin="anonymous">
   </script>
-  <script src="./js/main.js"  defer></script>
+  <script src="./js/img.js"></script>
 </body>
 </html>
