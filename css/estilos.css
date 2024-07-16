@@ -13,7 +13,7 @@
 
 body{
   font-family: "Poppins", sans-serif; 
-  height: 4000px;
+  height: 2000px;
   background-color: #ffffff;
   color: #000000;
   transition: background-color 0.3s, color 0.3s;
@@ -66,7 +66,6 @@ header{
   font-weight: bold;
 }
 
-
 .banners{
   width: 100%;
   height: 60vh;
@@ -109,6 +108,7 @@ header{
   color: var(--morado);
 }
 
+/* SKILLS GENERALES*/
 .skills{
   background-color: var(--lila-oscuro);
 }
@@ -120,11 +120,41 @@ header{
   font-weight: bold;
 }
 
+.custom-nav{
+  gap: 30px;
+}
 
-/* .skill-link{
-  color: aqua;
-} */
+.custom-tab-link {
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 30px;
+  color:var(--morado);
+  gap: 10px;
+}
 
+.custom-tab-link:hover {
+  color: var(--violeta);
+}
+
+.nav-link.custom-tab-link.active {
+  color: var(--morado) ; 
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item i {
+  margin-right: 15px; /* Ajusta este valor para cambiar el espaciado entre el icono y el texto */
+}
+
+.icon{
+  font-size: 25px;
+  color: var(--morado);
+}
+/* FIN ETIQUETA SKILLS  */
+
+/* ESTILOS PARA LOS ELEMENTOS DE LA ETIQUETA SKILLS */
 .skill-container {
   position: relative;
   display: inline-block;
@@ -148,98 +178,23 @@ header{
   opacity: 1;
 }
 
-
-.custom-nav{
-  gap: 30px;
+/*  */
+.skill-icon{
+  background-color: var(--morado);
+  border-radius: 8px;
+  padding: 5px;
 }
 
-.custom-tab-link {
-  font-family: "Mochiy Pop P One", sans-serif;
-  font-size: 30px;
-  color:var(--morado);
-  gap: 10px;
+.skill-contenido{
+  background-color: var(--lila);
+  border-radius: 8px;
+  padding: 15px;
+  /* margin-left: 5px; */
 }
 
-.custom-tab-link:hover {
-  color: var(--violeta);
-}
-
-.nav-link.custom-tab-link.active {
-  color: var(--morado) ; /* important! - Aqua cuando está activo */
-}
-
-/* .nav-tabs .nav-item + .nav-item {
-  margin-left: 20px;
-} */
-
-.nav-item {
-  display: flex;
-  align-items: center;
-}
-
-.nav-item i {
-  margin-right: 15px; /* Ajusta este valor para cambiar el espaciado entre el icono y el texto */
-}
-
-.icon{
-  font-size: 25px;
-  color: var(--morado);
-}
+/*  */
 
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.card-title {
-  margin-bottom: 1rem;
-}
-
-.card-text {
-  margin-bottom: 0.5rem;
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Ajusta la separación entre la imagen y el título */
-}
-
-.card-header img {
-  /* max-height: 100%;  */
-  /* Asegura que la imagen no desborde la columna */
-  /* width: auto;  */
-  /* Mantiene la proporción de la imagen */
-  width: 20%;
-  border: 2px solid #000000;
-  border-radius: 12px;
-  background-color: #000000;
-}
-
-
-.header {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Ajusta la separación entre la imagen y el título */
-}
-
-.header img {
-  /* max-height: 100%;  */
-  /* Asegura que la imagen no desborde la columna */
-  /* width: auto;  */
-  /* Mantiene la proporción de la imagen */
-  width: 20%;
-  border: 2px solid #000000;
-  background-color: #000000;
-  border-radius: 12px;
-}
-
-.card-text-wrapper {
-  display: flex;
-  flex-direction: column;
-}
 
 
 /* Seccion portafolio */
@@ -386,7 +341,7 @@ header{
 /* .sobre {
   background-color: #f8f9fa; 
 } */
- 
+
 .sobre{
   background-color: var(--lila);
 }
@@ -455,4 +410,19 @@ header{
 
 .sobre-container:hover .sobre-text {
   opacity: 1;
+}
+
+/* footer */
+
+.card-footer{
+  background-color: var(--violeta-claro);
+}
+
+.footer-body{
+  font-weight: 500;
+  color: var(--lila);
+}
+.footer-span{
+  font-family: "Mochiy Pop P One", sans-serif;
+  color: var(--morado);
 }
