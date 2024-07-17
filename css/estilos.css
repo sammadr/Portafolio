@@ -59,6 +59,19 @@ header{
   color: var(--morado);
 }
 
+/* Asegúrate de que el logo y el botón de menú hamburguesa estén en la misma fila en móviles */
+.navbar .container-fluid {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Para dispositivos de escritorio, asegura que los elementos estén en columnas */
+@media (min-width: 992px) {
+  .navbar .container-fluid {
+      flex-direction: column;
+  }
+}
+
 
 
 /*  */
