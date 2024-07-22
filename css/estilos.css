@@ -9,20 +9,171 @@
   --lila: #EEE4F2;
   --negro: #0D0D0D;
   --blanco: #fff;
+
+  --oscuro-fondo: #2e2e2e;
+  --oscuro-texto: #FFD6F1;
+  --oscuro-text: #FF74EF;
+  --oscuro-subtitulo:#EACDFF;
+  --oscuro-boton: #75024d;
+  --oscuro-boton-hover: #BF9FB7;
 }
 
 body{
   font-family: "Poppins", sans-serif; 
   height: 2000px;
-  background-color: #ffffff;
-  color: #000000;
+  /* color: var(--blanco); */
+  background-color: var(--blanco);
   transition: background-color 0.3s, color 0.3s;
 }
 
-body.dark-mode {
-  background-color: #2e2e2e;
-  color: #ffffff;
+
+.titulo{
+  color: var(--violeta);
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
 }
+
+.subtitulo{
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 30px;
+  color:var(--morado);
+  gap: 10px;
+}
+
+
+
+/* Definición de estilos en modo oscuro */
+body.dark-mode {
+  /* color: var(--blanco);
+  */
+  background-color: var(--negro); 
+  border: none;
+}
+
+body.dark-mode header {
+  background-color: var(--morado);
+}
+
+body.dark-mode .logo{
+  color: var(--blanco);
+}
+
+body.dark-mode .bi-moon-stars-fill{
+  color: var(--blanco);
+}
+
+body.dark-mode .titulo{
+  color: var(--blanco);
+}
+
+body.dark-mode .subtitulo{
+  color: var(--oscuro-subtitulo);
+}
+
+body.dark-mode .nav-link{
+  color: var(--blanco);
+}
+
+body.dark-mode .nav-link.active{
+  color: var(--blanco);
+}
+
+body.dark-mode .banner-titulo{
+  color: var(--violeta);
+}
+
+body.dark-mode .banner-subtitulo{
+  color: var(--morado);
+}
+
+body.dark-mode .banners-titulo{
+  --bs-bg-opacity: 0.6;
+}
+
+body.dark-mode .icon-link{
+  color: var(--violeta);
+}
+
+body.dark-mode .boton {
+  background-color: var(--violeta);
+  color: var(--oscuro-texto);
+  border: none;
+}
+
+body.dark-mode .boton:hover {
+  background-color: var(--morado);
+}
+
+body.dark-mode .skills{
+  background-color: var(--morado);
+}
+
+body.dark-mode .skill-contenido{
+  border-radius: none;
+  background-color: var(--oscuro-subtitulo);
+}
+
+body.dark-mode .icon{
+  color: var(--oscuro-subtitulo);
+}
+
+body.dark-mode .custom-tab-link{
+  color: var(--oscuro-subtitulo);
+}
+
+body.dark-mode .custom-tab-link.active{
+  color: var(--oscuro-subtitulo);
+}
+
+/* body.dark-mode .skill-text{
+  color: var(--blanco);
+} */
+
+body.dark-mode .portafolio{
+  background-color: var(--morado);
+}
+
+body.dark-mode .botonFiltro{
+  background-color: var(--blanco);
+  color:  var(--morado);
+}
+
+body.dark-mode .botonFiltro.active{
+  background-color: var(--oscuro-subtitulo);
+}
+
+body.dark-mode .sobre{
+  background-color: var(--morado);
+}
+
+body.dark-mode .sobre-parrafo{
+  color: var(--blanco);
+}
+
+body.dark-mode .footer {
+  background-color: var(--morado);
+}
+
+body.dark-mode .footer-body{
+  color: var(--blanco);
+}
+
+body.dark-mode .footer-span {
+  color: var(--oscuro-subtitulo);
+}
+
+body.dark-mode .footer-link {
+  color: var(--oscuro-subtitulo);
+}
+
+/* body.dark-mode .banner-2{
+  background-image: url(../assets/banner1.jpg);
+} */
+
+
+/* Añade más reglas aquí para otros elementos */
+
 
 .darkModeSwitch {
   background: none;
@@ -54,6 +205,7 @@ header{
   background-color: var(--lila);
 }
 
+
 .logo{
   font-family: "Rubik Moonrocks", sans-serif;
   color: var(--morado);
@@ -75,13 +227,13 @@ header{
 
 
 /*  */
-.bi-github,
+/* .bi-github,
 .bi-linkedin,
 .bi-brightness-high-fill,
 .bi-moon-stars-fill{
   color: var(--morado);
   font-weight: bold;
-}
+} */
 
 /* banner */
 
@@ -112,7 +264,14 @@ header{
 
 .banner-titulo{
   font-family: "Mochiy Pop P One", sans-serif;
+  font-family: 56px;
   color: var(--morado);
+}
+
+.banner-subtitulo{
+  font-family: "Poppins", sans-serif; 
+  font-size: 24px;
+  color: var(--oscuro-boton);
 }
 
 .boton{
@@ -127,17 +286,22 @@ header{
   color: var(--morado);
 }
 
+.icon-link{
+  color: var(--morado);
+}
+
+
 /* SKILLS GENERALES*/
 .skills{
   background-color: var(--lila-oscuro);
 }
 
-.skill-titulo{
+/* .skill-titulo{
   color: var(--violeta);
   text-transform: uppercase;
   font-size: 24px;
   font-weight: bold;
-}
+} */
 
 .custom-nav{
   gap: 30px;
@@ -185,7 +349,7 @@ header{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--blanco);
   background-color: rgba(0, 0, 0, 0.7);
   padding: 5px 10px;
   border-radius: 5px;
@@ -226,7 +390,7 @@ header{
   background-color: var(--lila);
 }
 
-.portafolio-titulo{
+/* .portafolio-titulo{
   font-size: 24px;
   font-weight: bold;
   color: var(--violeta);
@@ -237,7 +401,7 @@ header{
   font-family: "Mochiy Pop P One", sans-serif;
   color: var(--morado);
   font-size: 30px;
-}
+} */
 
 
 
@@ -379,7 +543,7 @@ header{
   padding: 20px;
 }
 
-.sobre-body h2 {
+/* .sobre-body h2 {
   color: var(--violeta);
   font-size: 24px;
   font-weight: bold;
@@ -389,7 +553,7 @@ header{
   font-family: "Mochiy Pop P One", sans-serif;
   color: var(--morado);
   font-size: 30px;
-}
+} */
 
 .sobre-parrafo {
   color: #343a40; /* Color del texto del párrafo */
@@ -446,15 +610,19 @@ header{
 } */
 
 .footer{
-  background-color: var(--violeta-claro);
+  background-color: var(--lila);
 }
 
 .footer-body{
   font-weight: 500;
-  color: var(--blanco);
+  color: var(--violeta);
 }
 
 .footer-span{
   font-family: "Mochiy Pop P One", sans-serif;
+  color: var(--morado);
+}
+
+.footer-link{
   color: var(--morado);
 }
