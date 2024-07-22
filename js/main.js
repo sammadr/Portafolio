@@ -2,10 +2,22 @@
 import './filtro.js';
 import './img.js';
 
+
+
+
 // Modo Dark
 document.getElementById('switch').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
 });
+
+const footerIcon = document.querySelector('.footer-icon');
+let cambioImg = true;
+if (cambioImg) {
+  footerIcon.setAttribute('src', './assets/figma.png');
+} else {
+  footerIcon.setAttribute('src', './assets/css.png');
+}
+cambioImg = !cambioImg; // Alternar el estado
 
 
 // NavBar
