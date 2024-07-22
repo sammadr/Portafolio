@@ -17,7 +17,7 @@
   <!-- Scripts de Módulo con defer -->
   <script src="js/main.js" type="module" defer></script>
 </head>
-<body>
+<body data-bs-theme="light">
   <!-- Encabezado del sitio -->
   <header>
     <nav class="navbar nav-underline navbar-expand-lg">
@@ -61,7 +61,7 @@
     <section class="banners banner-1 d-flex flex-column justify-content-center text-center" id="banner-1">
       <div class="banners-titulo bg-body-secondary py-5">
         <h1 class="fw-bold banner-titulo">Me dicen Samma</h1>
-        <p class="fw-bold ">Diseñadora y Desarrolladora Web</p>
+        <p class="fw-bold banner-subtitulo">Diseñadora y Desarrolladora Web</p>
         <ul class="d-flex justify-content-center gap-3 fs-4">
           <a class="icon-link" href="#">
             <i class="bi bi-github"></i>
@@ -79,7 +79,7 @@
 
     <!-- Skills -->
     <section class="skills p-4" id="skill">
-      <h2 class="skill-titulo text-center">Lo que hago</h2>
+      <h2 class="text-center titulo">Lo que hago</h2>
       <div class="container mt-3">
         <!-- Nav tabs -->
         <ul class="nav nav-underline custom-nav d-flex justify-content-center text-center" id="myTab" role="tablist">
@@ -107,7 +107,7 @@
                   </div>
                   <div class="">
                     <h2 class="skills-titulo">Front-end Development</h2>
-                    <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure laudantium fuga animi dolore explicabo rerum architecto id quidem, necessitatibus exercitationem repellat maiores aspernatur, nostrum et quos nihil nesciunt. Est, distinctio.</p>
+                    <p class="skills-parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure laudantium fuga animi dolore explicabo rerum architecto id quidem, necessitatibus exercitationem repellat maiores aspernatur, nostrum et quos nihil nesciunt. Est, distinctio.</p>
                   </div>
                 </div>
 
@@ -117,7 +117,7 @@
                   </div>
                   <div class="">
                     <h2 class="skills-titulo">UI/UX Designer</h2>
-                    <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure laudantium fuga animi dolore explicabo rerum architecto id quidem, necessitatibus exercitationem repellat maiores aspernatur, nostrum et quos nihil nesciunt. Est, distinctio.</p>
+                    <p class="skills-parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure laudantium fuga animi dolore explicabo rerum architecto id quidem, necessitatibus exercitationem repellat maiores aspernatur, nostrum et quos nihil nesciunt. Est, distinctio.</p>
                   </div>
                 </div>
               </div>
@@ -172,8 +172,8 @@
 
     <!-- Portafolio -->
     <section class="portafolio d-flex flex-column justify-content-center text-center p-5" id="portafolio">
-      <h2 class="portafolio-titulo">Portafolio</h2>
-      <h3 class="portafolio-subtitulo">Mis trabajos más recientes</h3>
+      <h2 class="portafolio-titulo titulo">Portafolio</h2>
+      <h3 class="portafolio-subtitulo subtitulo">Mis trabajos más recientes</h3>
       
       <!-- filtro -->
       <div class="filtro d-flex justify-content-center text-center gap-2 p-3">
@@ -305,8 +305,8 @@
           <span class="sobre-text">Haz clic para verme</span>
         </div>
         <div class="col-12 col-md-8 sobre-body d-flex flex-column text-md-start text-center">
-          <h2 class="text-uppercase">Sobre mi</h2>
-          <h3 class="">Me llamo Samantha Diaz</h3>
+          <h2 class="text-uppercase titulo">Sobre mi</h2>
+          <h3 class="subtitulo">Me llamo Samantha Diaz</h3>
           <p class="sobre-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores vero laboriosam velit voluptates? Voluptatem voluptates temporibus rerum distinctio rem? Saepe nemo a rem natus sed at ipsum nesciunt ad.</p>
           <p class="sobre-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores vero laboriosam velit voluptates? Voluptatem voluptates temporibus rerum distinctio rem? Saepe nemo a rem natus sed at ipsum nesciunt ad.</p>
         </div>
@@ -316,7 +316,7 @@
 
   <!-- Pie de página global del sitio -->
   <footer class="footer p-4">
-    <div class="footer-body d-flex flex-column flex-sm-row justify-content-between ">
+    <div class="footer-body d-flex flex-column flex-sm-row justify-content-between py-4">
       <p>
         <span class="footer-span">Samma</span> 
         <i class="bi bi-c-circle"></i> 2024 
@@ -335,7 +335,7 @@
         </li>
         <li class="ms-3">
           <a href="" class="footer-link">
-            <img src="./assets/figma.png" alt="">
+            <img src="./assets/figma.png" class="footer-icon" alt="">
           </a>
         </li>
       </ul>
