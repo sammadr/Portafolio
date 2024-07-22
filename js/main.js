@@ -1,6 +1,6 @@
 // Importar los otros módulos
 import './filtro.js';
-import './img.js';
+import './imgCambio.js';
 
 
 
