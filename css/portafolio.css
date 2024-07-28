@@ -1,0 +1,128 @@
+/* Seccion portafolio */
+
+.portafolio{
+  background-color: var(--lila);
+}
+
+/* filtro */
+
+.botonFiltro{
+  color: var(--blanco);
+  background-color: var(--violeta);
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+
+.botonFiltro.active {
+  background-color: var(--morado);
+}
+
+
+/* filtro cuerpo */
+
+.cards {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards:hover .card-img-top {
+  opacity: 0;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.cards-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--negro);
+  color: var(--blanco);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards:hover .cards-body {
+  opacity: 1;
+}
+
+.card-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+  position: absolute;
+  top: 25px; 
+  z-index: 1;
+}
+
+.cards-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.card-text {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.btn-links {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-link{
+  color: var(--blanco);
+}
+
+.btn-link:hover{
+  color: var(--blanco);
+  transform: scale(1.1);
+}
+
+
+
+
+/*  */
+.etiquetas {
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.etiqueta-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--lila);
+  padding: 5px;
+  border-radius: 10rem;
+}
+
+.etiqueta-card img {
+  width: 11px;
+  height: 11px;
+  margin-right: 2px;
+}
+
+.etiqueta-card h4 {
+  margin: 0;
+  font-size: 0.56rem;
+  color: var(--violeta);
+  text-transform: uppercase;
+}
