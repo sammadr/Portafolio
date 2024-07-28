@@ -127,7 +127,7 @@ body.dark-mode .banner-parrafo{
   color: var(--blanco);
 }
 
-body.dark-mode .icon-link{
+body.dark-mode .icon__link{
   color: var(--oscuro-subtitulo);
 }
 
