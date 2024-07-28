@@ -75,11 +75,15 @@
 }
 
 .boton{
-  font-family: "Mochiy Pop P One", sans-serif;
-  background-color: var(--morado);
+  display: inline-flex;
+  padding: 10px 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24px;
   color: var(--lila);
-  border-radius: 22px;
-  outline: none;
+  background: var(--morado);
+  backdrop-filter: blur(2px);
+  font-family: "Mochiy Pop P One", sans-serif;
 }
 
 .boton:hover{
@@ -90,6 +94,7 @@
 
 .icon__link{
   color: var(--morado);
+  font-size: 35px;
 }
 
 .icon__link:hover{
