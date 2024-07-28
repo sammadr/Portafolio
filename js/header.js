@@ -1,24 +1,18 @@
-// NavBar
-const navBotons = document.querySelectorAll('.nav-link');
+// Combinar funcionalidad de NavBar y mostrar/ocultar secciones
+const navBotons = document.querySelectorAll('.nav-link[data-target]');
+const mainContent = document.getElementById('main-content');
+const sections = mainContent.children;
+
 navBotons.forEach(boton => {
-  boton.addEventListener('click', function(){
+  boton.addEventListener('click', function(event) {
+    event.preventDefault();
     // Quitar la clase 'active' de todos los botones
     navBotons.forEach(btn => btn.classList.remove('active'));
 
     // Agregar la clase 'active' al botón clicado
     this.classList.add('active');
-  });
-});
 
-
-// Funcionalidad para mostrar/ocultar secciones
-const navLinks = document.querySelectorAll('a[data-target]');
-const mainContent = document.getElementById('main-content');
-const sections = mainContent.children;
-
-navLinks.forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
+    // Obtener el targetId del botón clicado
     const targetId = this.getAttribute('data-target');
 
     if (targetId === 'inicio') {
@@ -35,13 +29,6 @@ navLinks.forEach(link => {
         } else {
           section.classList.remove('hidden');
           section.querySelectorAll('.extra-content').forEach(content => content.style.display = 'block');
-        
-        // Si es la sección "Sobre mí", agrega la clase top-aligned a la imagen
-        // if (targetId === 'sobre-mi') {
-        //   section.querySelector('.sobre-container').classList.add('top-aligned');
-        // } else {
-        //   section.querySelector('.sobre-container').classList.remove('top-aligned');
-        // }
         }
       }
     }
