@@ -17,13 +17,19 @@
   <!-- Scripts de Módulo con defer -->
   <script src="js/main.js" type="module" defer></script>
 </head>
-<body data-bs-theme="light">
+<body>
   <!-- Encabezado del sitio -->
   <header>
     <nav class="navbar nav-underline navbar-expand-lg">
       <div class="container-fluid d-flex justify-content-between align-items-center">
-        <a class="navbar-brand logo">
-          Samma
+        <a class="navbar-brand header__band d-flex align-items-center">
+          <img src="./assets/samma-icon.png" class="header_avatar img-fluid" alt="">
+          <span class="header__name d-flex align-items-center ms-2">
+            <span>Samma</span>
+            <span class="header__verificacion ms-1">
+              <i class="bi bi-patch-check-fill" ></i>
+            </span>
+          </span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -31,16 +37,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#banner-1">Home</a>
+              <a class="nav-link active" href="#inicio" data-target="inicio">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skill">Skills</a>
+              <a class="nav-link" href="#skills" data-target="skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portafolio">Portafolio</a>
+              <a class="nav-link" href="#portafolio" data-target="portafolio">Portafolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre</a>
+              <a class="nav-link" href="#sobre-mi" data-target="sobre-mi">Sobre</a>
             </li>
             <!-- Modo Oscuro -->
             <li class="nav-item">
@@ -56,13 +62,24 @@
   </header>
 
   <!-- Contenido principal -->
-  <main>
+  <main id="main-content">
     <!-- Banner 1 -->
-    <section class="banners banner-1 d-flex flex-column justify-content-center text-center" id="banner-1">
-      <div class="banners-titulo bg-body-secondary py-5">
+    <section class="banner d-flex flex-column justify-content-center text-center" id="inicio">
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="flower"></div>
+      <div class="p-5">
         <h1 class="fw-bold banner-titulo">Me dicen Samma</h1>
         <p class="fw-bold banner-subtitulo">Diseñadora y Desarrolladora Web</p>
-        <ul class="d-flex justify-content-center gap-3 fs-4">
+        <p class="fw-bold banner-parrafo text-center"> Si ves flores en mi trabajo, no te preocupes, no soy una jardinera perdida en el código, simplemente florezco en cada proyecto que hago. ¡Vamos a cultivar algo increíble juntos!</p>
+        <ul class="icon-container d-flex justify-content-center gap-3 fs-4">
           <a class="icon-link" href="#">
             <i class="bi bi-github"></i>
           </a>
@@ -101,24 +118,28 @@
             <!-- Contenido -->
             <div class="container px-4 py-2 d-flex justify-content-center">
               <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 d-flex justify-content-center gap-5">
-                <div class="skill-contenido col d-flex align-items-start">
-                  <div class="skill-icon flex-shrink-0 me-3">
-                    <img src="assets/web-development.svg" alt="" class="img-fluid rounded-start">
+                <div class="skill-contenido col d-flex flex-column align-items-start">
+                  <div class="d-flex align-items-start">
+                    <div class="skill-icon flex-shrink-0 me-3">
+                      <img src="assets/web-development.svg" alt="" class="img-fluid rounded-start">
+                    </div>
+                    <div class="title-container">
+                      <h2 class="skills-titulo hover-highlight">Front-end Development</h2>
+                    </div>
                   </div>
-                  <div class="">
-                    <h2 class="skills-titulo">Front-end Development</h2>
-                    <p class="skills-parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure laudantium fuga animi dolore explicabo rerum architecto id quidem, necessitatibus exercitationem repellat maiores aspernatur, nostrum et quos nihil nesciunt. Est, distinctio.</p>
-                  </div>
+                  <p class="skills-parrafo"> Mi curiosidad me guía a crear productos <span class="skills-subrayado">sólidos</span> y <span class="skills-subrayado">adaptables</span> que transforman cada interacción en una experiencia encantadora. ¡Piensa en mí como una jardinera del código, cultivando experiencias de usuario que florecen con cada clic!</p>
                 </div>
-
-                <div class="skill-contenido col d-flex align-items-start">
-                  <div class="skill-icon flex-shrink-0 me-3">
-                    <img src="assets/ui-design.svg" alt="" class="img-fluid rounded-start">
+            
+                <div class="skill-contenido col d-flex flex-column align-items-start">
+                  <div class="d-flex align-items-start">
+                    <div class="skill-icon flex-shrink-0 me-3">
+                      <img src="assets/ui-design.svg" alt="" class="img-fluid rounded-start">
+                    </div>
+                    <div class="title-container">
+                      <h2 class="skills-titulo hover-highlight">UI/UX Designer</h2>
+                    </div>
                   </div>
-                  <div class="">
-                    <h2 class="skills-titulo">UI/UX Designer</h2>
-                    <p class="skills-parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure laudantium fuga animi dolore explicabo rerum architecto id quidem, necessitatibus exercitationem repellat maiores aspernatur, nostrum et quos nihil nesciunt. Est, distinctio.</p>
-                  </div>
+                  <p class="skills-parrafo">Siguiendo la filosofía de que <span class="skills-subrayado">menos es más</span>, busco diseñar páginas fáciles de entender pero visualmente atractivas. Lo minimalista no tiene que ser simple, ¡lo minimalista puede tener mucho estilo!</p>
                 </div>
               </div>
             </div>
@@ -195,32 +216,34 @@
       <div class="d-flex justify-content-center text-center gap-2 flex-wrap">
         <!-- Card 1 -->
         <div id="html" class="card cards" style="width: 18rem; height: 15rem;">
-          <img src="assets/samma-icon.png" class="card-img-top" alt="...">
+          <img src="./assets/portafolio/proyecto1.png" class="card-img-top" alt="...">
           <div class="cards-body">
             <div class="card-title-container d-flex justify-content-between align-items-center">
-              <h5 class="cards-title">Card title</h5>
+              <h5 class="cards-title">Café Oslo</h5>
               <span class="btn-links">
-                <a href="#" class="btn btn-link">
+                <a href="https://sammadr.github.io/cafeOslo-Domestika/" class="btn btn-link" target="_blank">
                   <i class="bi bi-link-45deg"></i>
                 </a>
-                <a href="#" class="btn btn-link">
+                <a href="https://github.com/sammadr/cafeOslo-Domestika" class="btn btn-link" target="_blank">
                   <i class="bi bi-github btn-link"></i>
                 </a>
               </span>
             </div>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">El proyecto consiste en la creación de una página web responsive para una cafetería ficticia.</p>
+
+            <!-- Etiquetas -->
             <div class="etiquetas d-flex justify-content-center">
               <span class="etiqueta-card">
-                <img src="assets/icons/figma-icon.png" class="card-icon" alt="">
-                <h4 class="card-icon-titulo">figma</h4>
+                <img src="./assets/icon-filtro/html-icon.png" class="card-icon" alt="html icon">
+                <h4 class="card-icon-titulo">html</h4>
               </span>
               <span class="etiqueta-card">
-                <img src="assets/icons/css-icon.png" class="card-icon" alt="">
+                <img src="./assets/icon-filtro/css-icon.png" class="card-icon" alt="">
                 <h4 class="card-icon-titulo">css</h4>
               </span>
               <span class="etiqueta-card">
-                <img src="assets/icons/html-icon.png" class="card-icon" alt="">
-                <h4 class="card-icon-titulo">html</h4>
+                <img src="./assets/icon-filtro/js.png" class="card-icon" alt="">
+                <h4 class="card-icon-titulo">JavaScript</h4>
               </span>
             </div>
           </div>
@@ -228,7 +251,7 @@
         
         <!-- Card 2 -->
         <div id="javascript" class="card cards" style="width: 18rem; height: 15rem;">
-          <img src="assets/samma-ia.jpg" class="card-img-top" alt="...">
+          <img src="./assets/samma-ia.jpg" class="card-img-top" alt="...">
           <div class="cards-body">
             <div class="card-title-container d-flex justify-content-between align-items-center">
               <h5 class="cards-title">Card title</h5>
@@ -244,15 +267,15 @@
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <div class="etiquetas d-flex justify-content-center">
               <span class="etiqueta-card">
-                <img src="assets/icons/figma-icon.png" class="card-icon" alt="">
+                <img src="./assets/icon-filtro/figma-icon.png" class="card-icon" alt="">
                 <h4 class="card-icon-titulo">figma</h4>
               </span>
               <span class="etiqueta-card">
-                <img src="assets/icons/css-icon.png" class="card-icon" alt="">
+                <img src="./assets/icon-filtro/css-icon.png" class="card-icon" alt="">
                 <h4 class="card-icon-titulo">css</h4>
               </span>
               <span class="etiqueta-card">
-                <img src="assets/icons/html-icon.png" class="card-icon" alt="">
+                <img src="./assets/icon-filtro/html-icon.png" class="card-icon" alt="">
                 <h4 class="card-icon-titulo">html</h4>
               </span>
             </div>
@@ -261,7 +284,7 @@
         
         <!-- Card 3 -->
         <div id="react" class="card cards" style="width: 18rem; height: 15rem;">
-          <img src="assets/sam.jpg" class="card-img-top" alt="...">
+          <img src="./assets/sam.jpg" class="card-img-top" alt="...">
           <div class="cards-body">
             <div class="card-title-container d-flex justify-content-between align-items-center">
               <h5 class="cards-title">Card title</h5>
@@ -277,15 +300,81 @@
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <div class="etiquetas d-flex justify-content-center">
               <span class="etiqueta-card">
-                <img src="assets/icons/figma-icon.png" class="card-icon" alt="">
+                <img src="./assets/icon-filtro/figma-icon.png" class="card-icon" alt="">
                 <h4 class="card-icon-titulo">figma</h4>
               </span>
               <span class="etiqueta-card">
-                <img src="assets/icons/css-icon.png" class="card-icon" alt="">
+                <img src="./assets/icon-filtro/css-icon.png" class="card-icon" alt="">
                 <h4 class="card-icon-titulo">css</h4>
               </span>
               <span class="etiqueta-card">
-                <img src="assets/icons/html-icon.png" class="card-icon" alt="">
+                <img src="./assets/icon-filtro/html-icon.png" class="card-icon" alt="">
+                <h4 class="card-icon-titulo">html</h4>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div id="javascript" class="card cards extra-content" style="width: 18rem; height: 15rem;">
+          <img src="./assets/samma-ia.jpg" class="card-img-top" alt="...">
+          <div class="cards-body">
+            <div class="card-title-container d-flex justify-content-between align-items-center">
+              <h5 class="cards-title">Card title</h5>
+              <span class="btn-links">
+                <a href="#" class="btn btn-link">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+                <a href="#" class="btn btn-link">
+                  <i class="bi bi-github btn-link"></i>
+                </a>
+              </span>
+            </div>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="etiquetas d-flex justify-content-center">
+              <span class="etiqueta-card">
+                <img src="./assets/icon-filtro/figma-icon.png" class="card-icon" alt="">
+                <h4 class="card-icon-titulo">figma</h4>
+              </span>
+              <span class="etiqueta-card">
+                <img src="./assets/icon-filtro/css-icon.png" class="card-icon" alt="">
+                <h4 class="card-icon-titulo">css</h4>
+              </span>
+              <span class="etiqueta-card">
+                <img src="./assets/icon-filtro/html-icon.png" class="card-icon" alt="">
+                <h4 class="card-icon-titulo">html</h4>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div id="html" class="card cards extra-content" style="width: 18rem; height: 15rem;">
+          <img src="./assets/samma-icon.png" class="card-img-top" alt="...">
+          <div class="cards-body">
+            <div class="card-title-container d-flex justify-content-between align-items-center">
+              <h5 class="cards-title">Card title</h5>
+              <span class="btn-links">
+                <a href="#" class="btn btn-link">
+                  <i class="bi bi-link-45deg"></i>
+                </a>
+                <a href="#" class="btn btn-link">
+                  <i class="bi bi-github btn-link"></i>
+                </a>
+              </span>
+            </div>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="etiquetas d-flex justify-content-center">
+              <span class="etiqueta-card">
+                <img src="./assets/icon-filtro/figma-icon.png" class="card-icon" alt="">
+                <h4 class="card-icon-titulo">figma</h4>
+              </span>
+              <span class="etiqueta-card">
+                <img src="./assets/icon-filtro/css-icon.png" class="card-icon" alt="">
+                <h4 class="card-icon-titulo">css</h4>
+              </span>
+              <span class="etiqueta-card">
+                <img src="./assets/icon-filtro/html-icon.png" class="card-icon" alt="">
                 <h4 class="card-icon-titulo">html</h4>
               </span>
             </div>
@@ -293,22 +382,41 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Banner 2 -->
     <section class="banners banner-2"></section>
 
     <!-- Sobre mi -->
-    <section class="sobre d-flex justify-content-center text-center p-5" id="sobre">
+    <section class="sobre d-flex justify-content-center text-center p-5" id="sobre-mi">
       <div class="sobre-header d-flex flex-wrap align-items-center">
-        <div class="sobre-container col-12 col-md-4 text-center mb-3 mb-md-0 btn boton-img" data-contexto="cambio-img">
+        <div class="sobre-container col-12 col-md-4 text-center mb-3 mb-md-0 boton-img top-aligned" data-contexto="cambio-img">
           <img src="./assets/samma-ia.jpg" alt="" class="img-fluid rounded-circle img-boton">
-          <span class="sobre-text">Haz clic para verme</span>
+          <span class="sobre-text">Un clic y descubre a la flor detrás del código</span>
         </div>
-        <div class="col-12 col-md-8 sobre-body d-flex flex-column text-md-start text-center">
+        <div class="sobre-body col-12 col-md-8 d-flex flex-column text-md-start">
           <h2 class="text-uppercase titulo">Sobre mi</h2>
-          <h3 class="subtitulo">Me llamo Samantha Diaz</h3>
-          <p class="sobre-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores vero laboriosam velit voluptates? Voluptatem voluptates temporibus rerum distinctio rem? Saepe nemo a rem natus sed at ipsum nesciunt ad.</p>
-          <p class="sobre-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores vero laboriosam velit voluptates? Voluptatem voluptates temporibus rerum distinctio rem? Saepe nemo a rem natus sed at ipsum nesciunt ad.</p>
+          <h3 class="subtitulo">Me llamo Samantha Díaz</h3>
+          <p class="sobre-parrafo ">La florista del código y arquitecta de sitios web. Mis habilidades en diseño y desarrollo son como un jardín en constante crecimiento, siempre floreciendo con nuevas ideas y soluciones. Si alguna vez ves un error en mi código, no te preocupes, es solo una 
+          <span class="subrayado "><b>flor</b></span> en el camino hacia la perfección.</p>
+          <p class="sobre-parrafo">Piensa en mí como una jardinera de la web, cultivando interfaces hermosas y plantando ideas frescas en cada proyecto que toco. ¡Vamos a hacer florecer tu visión! Tengo la experiencia necesaria para hacer que cualquier idea florezca; solo me falta el jardín adecuado, es decir, la <span class="subrayado"> <b>oportunidad</b>.</span> de trabajar en una empresa </p>
+          <!-- Contenido adicional aquí -->
+          <div class="extra-content">
+            <!-- <h2 class="text-uppercase titulo">Contenido extra</h2> -->
+            <h3 class="subtitulo">Vengo de una hermosa isla llamada República Dominicana <span class="bandera">🇩🇴</span></h3>
+            <p class="sobre-parrafo">Recientemente me gradué en Desarrollo de Software, con habilidades en diseño y desarrollo web. Estoy comprometida a crear experiencias de usuario fluidas y minimalistas. Me conocen por ser una apasionada de la escritura limpia y accesible. Me enfoco en los detalles, especialmente los pequeños detalles. Mi lema favorito es <span class="subrayado">menos es más</span>.
+            </p>
+          </div>
+          <!-- Contenido adicional aquí -->
+          <!-- <div class="extra-content text-md-start">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique atque repudiandae pariatur. Ipsum quam optio blanditiis totam dignissimos dolorum quod amet. Adipisci tenetur voluptatum expedita asperiores fugiat aspernatur harum iusto.</p>
+          </div> -->
+          <p class="sobre-parrafo ">Actualmente estoy disponible para trabajar en cualquier modalidad. No dudes en contactarme, Prometo no pincharte 
+            <span class="texto-adicional" >
+              (aunque algunas flores tienen espinas, <span class="adiccional-sub">¡yo soy inofensiva!</span>) 
+            </span>
+            <a href="mailto:samm_dr@hotmail.com" class="email" target="_blank">samm_dr@hotmail.com</a>
+          </p>
+          
         </div>
       </div>
     </section>
@@ -335,7 +443,7 @@
         </li>
         <li class="ms-3">
           <a href="" class="footer-link">
-            <img src="./assets/figma.png" class="footer-icon" alt="">
+            <img src="./assets/figma.png" class="footer-icon" alt="Figma icon">
           </a>
         </li>
       </ul>
