@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Moonrocks&display=swap');
-/* @import url(); */
+@import url('./header.css');
+@import url('./banner.css');
+@import url('./skills.css');
+@import url('./portafolio.css');
+@import url('./sobreMi.css');
+@import url('./footer.css');
+
 
 :root{
   --morado: #3F022A;
@@ -18,12 +24,16 @@
   --oscuro-boton-hover: #BF9FB7;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body{
+  /* height: 2000px; */
   font-family: "Poppins", sans-serif; 
-  height: 2000px;
-  /* color: var(--blanco); */
   background-color: var(--blanco);
   transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
 }
 
 
@@ -42,22 +52,22 @@ body{
 }
 
 
+.hidden {
+  display: none !important;
+}
+
+.extra-content {
+  display: none;
+}
+
+
 
 /* Definición de estilos en modo oscuro */
+
 body.dark-mode {
-  /* color: var(--blanco);
-  */
   background-color: var(--negro); 
-  border: none;
 }
 
-body.dark-mode header {
-  background-color: var(--morado);
-}
-
-body.dark-mode .logo{
-  color: var(--blanco);
-}
 
 body.dark-mode .bi-moon-stars-fill{
   color: var(--blanco);
@@ -71,38 +81,63 @@ body.dark-mode .subtitulo{
   color: var(--oscuro-subtitulo);
 }
 
+body.dark-mode .navbar-toggler{
+  color: var(--blanco);
+  background-color: var(--blanco);
+}
+
+body.dark-mode .navbar-toggler-icon{
+  color: var(--blanco);
+  background-color: var(--blanco);
+}
+
+body.dark-mode header {
+  background-color: var(--morado);
+}
+
+body.dark-mode .header__name, .header__verificacion{
+  color: var(--blanco);
+}
+
+body.dark-mode .header__verificacion{
+  color: var(--blanco);
+}
+
 body.dark-mode .nav-link{
   color: var(--blanco);
 }
 
 body.dark-mode .nav-link.active{
-  color: var(--blanco);
+  color: var(--oscuro-subtitulo);
+}
+
+body.dark-mode .banner{
+  background-color: var(--morado);
 }
 
 body.dark-mode .banner-titulo{
-  color: var(--violeta);
+  color: var(--blanco);
 }
 
 body.dark-mode .banner-subtitulo{
-  color: var(--morado);
+  color: var(--oscuro-subtitulo);
 }
 
-body.dark-mode .banners-titulo{
-  --bs-bg-opacity: 0.6;
+body.dark-mode .banner-parrafo{
+  color: var(--blanco);
 }
 
 body.dark-mode .icon-link{
-  color: var(--violeta);
+  color: var(--oscuro-subtitulo);
 }
 
 body.dark-mode .boton {
-  background-color: var(--violeta);
-  color: var(--oscuro-texto);
-  border: none;
+  background-color: var(--oscuro-subtitulo);
+  color: var(--morado);
 }
 
 body.dark-mode .boton:hover {
-  background-color: var(--morado);
+  background-color: var(--blanco);
 }
 
 body.dark-mode .skills{
@@ -112,6 +147,11 @@ body.dark-mode .skills{
 body.dark-mode .skill-contenido{
   border-radius: none;
   background-color: var(--oscuro-subtitulo);
+}
+
+body.dark-mode .skills-subrayado{
+  color: var(--morado);
+  border-bottom: .125em solid var(--morado);
 }
 
 body.dark-mode .icon{
@@ -125,10 +165,6 @@ body.dark-mode .custom-tab-link{
 body.dark-mode .custom-tab-link.active{
   color: var(--oscuro-subtitulo);
 }
-
-/* body.dark-mode .skill-text{
-  color: var(--blanco);
-} */
 
 body.dark-mode .portafolio{
   background-color: var(--morado);
@@ -151,6 +187,27 @@ body.dark-mode .sobre-parrafo{
   color: var(--blanco);
 }
 
+
+body.dark-mode .subrayado{
+  color: var(--blanco);
+  border-bottom: .125em solid var(--oscuro-subtitulo);
+}
+
+body.dark-mode .texto-adicional {
+  color: var(--oscuro-subtitulo);
+}
+
+
+body.dark-mode .email {
+  color: var(--blanco);
+  border-bottom: .125em solid var(--oscuro-subtitulo);
+}
+
+body.dark-mode .email:hover {
+  color: var(--morado);
+  background-color: var(--oscuro-subtitulo);
+}
+
 body.dark-mode .footer {
   background-color: var(--morado);
 }
@@ -166,11 +223,6 @@ body.dark-mode .footer-span {
 body.dark-mode .footer-link {
   color: var(--oscuro-subtitulo);
 }
-
-/* body.dark-mode .banner-2{
-  background-image: url(../assets/banner1.jpg);
-} */
-
 
 /* Añade más reglas aquí para otros elementos */
 
@@ -200,24 +252,64 @@ body.dark-mode .darkModeSwitch span:last-child {
   display: inline;
 }
 
+
+
 /* header */
-header{
+header {
   background-color: var(--lila);
 }
 
+.header__band {
+  display: flex;
+  align-items: center;
+}
 
-.logo{
-  font-family: "Rubik Moonrocks", sans-serif;
+.header_avatar {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+.header__name {
+  color: var(--morado);
+  font-weight: 700;
+  font-family: "Mochiy Pop P One", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header__verificacion {
+  color: var(--violeta);
+  padding-left: .25rem;
+}
+
+.nav-link {
   color: var(--morado);
 }
 
-/* Asegúrate de que el logo y el botón de menú hamburguesa estén en la misma fila en móviles */
+.nav-link:hover {
+  color: var(--violeta);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--violeta);
+}
+
+
+.bi-brightness-high-fill{
+  color: var(--morado);
+}
+
+/* El logo y el botón de menú hamburguesa estén en la misma fila en móviles */
 .navbar .container-fluid {
   flex-direction: row;
   align-items: center;
 }
 
-/* Para dispositivos de escritorio, asegura que los elementos estén en columnas */
+/* Para dispositivos de escritorio, los elementos estan en columnas */
 @media (min-width: 992px) {
   .navbar .container-fluid {
     flex-direction: column;
@@ -226,403 +318,4 @@ header{
 
 
 
-/*  */
-/* .bi-github,
-.bi-linkedin,
-.bi-brightness-high-fill,
-.bi-moon-stars-fill{
-  color: var(--morado);
-  font-weight: bold;
-} */
 
-/* banner */
-
-.banners{
-  width: 100%;
-  height: 60vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.banner-1{
-  background-image: url(../assets/banner1.jpg);
-}
-
-.banner-2{
-  background-image: url(../assets/banner2.jpg);
-}
-
-.banner-3{
-  background-image: url(./assets/banner-3.png);
-}
-
-.banners-titulo{
-  --bs-bg-opacity: 0.3;
-}
-
-.banner-titulo{
-  font-family: "Mochiy Pop P One", sans-serif;
-  font-family: 56px;
-  color: var(--morado);
-}
-
-.banner-subtitulo{
-  font-family: "Poppins", sans-serif; 
-  font-size: 24px;
-  color: var(--oscuro-boton);
-}
-
-.boton{
-  background-color: var(--morado);
-  color: var(--lila);
-  border-radius: 24px;
-  outline: none;
-}
-
-.boton:hover{
-  background-color: var(--lila);
-  color: var(--morado);
-}
-
-.icon-link{
-  color: var(--morado);
-}
-
-
-/* SKILLS GENERALES*/
-.skills{
-  background-color: var(--lila-oscuro);
-}
-
-/* .skill-titulo{
-  color: var(--violeta);
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: bold;
-} */
-
-.custom-nav{
-  gap: 30px;
-}
-
-.custom-tab-link {
-  font-family: "Mochiy Pop P One", sans-serif;
-  font-size: 30px;
-  color:var(--morado);
-  gap: 10px;
-}
-
-.custom-tab-link:hover {
-  color: var(--violeta);
-}
-
-.nav-link.custom-tab-link.active {
-  color: var(--morado) ; 
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-}
-
-.nav-item i {
-  margin-right: 15px; /* Ajusta este valor para cambiar el espaciado entre el icono y el texto */
-}
-
-.icon{
-  font-size: 25px;
-  color: var(--morado);
-}
-/* FIN ETIQUETA SKILLS  */
-
-/* ESTILOS PARA LOS ELEMENTOS DE LA ETIQUETA SKILLS */
-.skill-container {
-  position: relative;
-  display: inline-block;
-  margin: 15px;
-}
-
-.skill-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--blanco);
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 5px 10px;
-  border-radius: 5px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.skill-container:hover .skill-text {
-  opacity: 1;
-}
-
-/* Estilos para los elementos especialidad */
-.skill-icon{
-  background-color: var(--morado);
-  border-radius: 8px;
-  padding: 5px;
-}
-
-.skill-contenido{
-  background-color: var(--lila);
-  border-radius: 8px;
-  padding: 15px;
-}
-
-.skills-titulo{
-  font-family: "Mochiy Pop P One", sans-serif;
-  font-size: 20px;
-  color:var(--morado);
-}
-/*  */
-
-
-
-
-/* Seccion portafolio */
-
-.portafolio{
-  background-color: var(--lila);
-}
-
-/* .portafolio-titulo{
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--violeta);
-  text-transform: uppercase;
-}
-
-.portafolio-subtitulo{
-  font-family: "Mochiy Pop P One", sans-serif;
-  color: var(--morado);
-  font-size: 30px;
-} */
-
-
-
-
-
-
-/* filtro */
-
-.botonFiltro{
-  color: var(--blanco);
-  background-color: var(--violeta);
-  border: none;
-  border-radius: 25px;
-  padding: 10px;
-  text-transform: uppercase;
-  font-family: "Mochiy Pop P One", sans-serif;
-  font-size: 10px;
-}
-
-/* .botonFiltro-all{
-  background-color: var(--morado);
-} */
-
-.botonFiltro.active {
-  background-color: var(--morado);
-}
-
-
-/* filtro cuerpo */
-
-.cards {
-  position: relative;
-  overflow: hidden;
-}
-
-.cards:hover .card-img-top {
-  opacity: 0;
-}
-
-.cards-body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--negro);
-  color: var(--blanco);
-  opacity: 0;
-  transition: opacity 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.cards:hover .cards-body {
-  opacity: 1;
-}
-
-.card-title-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 0 10px;
-  position: absolute;
-  top: 25px; /* Ajusta este valor según sea necesario */
-  z-index: 1;
-}
-
-.cards-title {
-  font-size: 1.25rem;
-  margin: 0;
-}
-
-.btn-links {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-link{
-  color: var(--blanco);
-}
-
-.btn-link:hover{
-  color: var(--blanco);
-  transform: scale(1.1);
-}
-
-.card-text {
-  /* Mueve el texto al fondo del contenedor */
-  /* margin-top: auto;  */
-  margin-top: 20px;
-  padding: 10px;
-}
-
-.etiquetas {
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.etiqueta-card {
-  display: flex;
-  align-items: center;
-  background-color: var(--lila);
-  padding: 5px;
-  border-radius: 10rem;
-}
-
-.etiqueta-card img {
-  width: 11px;
-  height: 11px;
-  margin-right: 2px;
-}
-
-.etiqueta-card h4 {
-  margin: 0;
-  font-size: 0.56rem;
-  color: var(--violeta);
-  text-transform: uppercase;
-}
-
-
-
-/* Sobre */
-
-/* Color de fondo claro */
-/* .sobre {
-  background-color: #f8f9fa; 
-} */
-
-.sobre{
-  background-color: var(--lila);
-}
-
-.sobre-header {
-  border-radius: 15px;
-  /* background-color: rgba(255, 192, 203, 0.5);  */
-  padding: 20px;
-}
-
-/* .sobre-body h2 {
-  color: var(--violeta);
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.sobre-body h3 {
-  font-family: "Mochiy Pop P One", sans-serif;
-  color: var(--morado);
-  font-size: 30px;
-} */
-
-.sobre-parrafo {
-  color: #343a40; /* Color del texto del párrafo */
-}
-
-.sobre img {
-  width: 100%;
-  max-width: 150px; /* Tamaño máximo de la imagen */
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .sobre-header {
-    flex-direction: column; /* Colocar elementos en columna para tabletas */
-  }
-  .sobre img {
-    max-width: 250px; /* Tamaño de la imagen para tablets */
-    margin-bottom: 1rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .sobre img {
-    max-width: 350px; /* Tamaño de la imagen para desktops */
-  }
-}
-
-.sobre-container {
-  position: relative;
-  display: inline-block;
-  /* margin: 15px; */
-}
-
-.sobre-text {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 5px 10px;
-  border-radius: 5px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.sobre-container:hover .sobre-text {
-  opacity: 1;
-}
-
-/* footer */
-
-/* .card-footer{
-  background-color: var(--violeta-claro);
-} */
-
-.footer{
-  background-color: var(--lila);
-}
-
-.footer-body{
-  font-weight: 500;
-  color: var(--violeta);
-}
-
-.footer-span{
-  font-family: "Mochiy Pop P One", sans-serif;
-  color: var(--morado);
-}
-
-.footer-link{
-  color: var(--morado);
-}
