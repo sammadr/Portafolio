@@ -1,0 +1,146 @@
+/* Sobre */
+.sobre{
+  background-color: var(--lila);
+}
+
+.sobre .subtitulo{
+  padding-bottom: 1rem;
+}
+.sobre-header {
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.sobre-parrafo {
+  color: var(--negro); /* Color del texto del párrafo */
+}
+
+.sobre img {
+  width: 100%;
+  max-width: 150px; /* Tamaño máximo de la imagen */
+}
+
+.img-boton:hover{
+  cursor: pointer;
+}
+
+/* Posición específica para la imagen cuando se hace clic en "Sobre mí" */
+.sobre-container.top-aligned {
+  order: -1; /* Mueve la imagen al inicio */
+  align-self: flex-start; /* Alinea la imagen al inicio */
+}
+
+/* .sobre-container.top-aligned .img-boton {
+  max-width: 150px;
+} */
+
+
+/* Estilos para dispositivos tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sobre-header {
+    flex-direction: column; 
+  }
+  .sobre img {
+    max-width: 250px; /* Tamaño de la imagen para tablets */
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sobre img {
+    max-width: 350px; /* Tamaño de la imagen para desktops */
+  }
+}
+
+.sobre-container {
+  position: relative;
+  display: inline-block;
+}
+
+.sobre-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--blanco);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sobre-container:hover .sobre-text {
+  opacity: 1;
+  /* cursor: pointer; */
+}
+
+.extra-content .subtitulo{
+  font-size: 20px;
+  color: var(--violeta);
+  padding-top: 1.2rem;
+}
+
+
+
+
+/* span{
+  position:relative;
+}
+span::before{
+  position:absolute;
+  content: '';
+  height:1rem;
+  width:100%;
+  background-color:yellow;
+  z-index:-1;
+} */
+
+/* .subrayado{
+  position: relative;
+  padding: 0 5px; 
+  border-bottom: .125em dashed red;
+} */
+
+/* .subrayado:hover {
+  background-color: var(--violeta);
+  color: var(--blanco);
+  padding: 0 5px; 
+} */
+/* Espaciado adicional para hacer el resaltado más visible */
+
+/* .subrayado {
+  border-bottom: .125em dashed var(--violeta);
+} */
+
+/* .subrayado b{
+  color: var(--violeta);
+} */
+
+.subrayado{
+  color: var(--violeta);
+  border-bottom: .125em solid var(--violeta);
+}
+
+.texto-adicional {
+  color: var(--morado);
+  font-style: italic;
+}
+
+.adiccional-sub{
+  font-weight: bold;
+}
+
+.email {
+  text-decoration: none;
+  padding: 0 5px; 
+  color: var(--morado);
+  font-weight: bold;
+  border-bottom: .125em solid var(--violeta);
+}
+
+.email:hover {
+  padding: 0 5px; 
+  color: var(--blanco);
+  background-color: var(--violeta);
+}
