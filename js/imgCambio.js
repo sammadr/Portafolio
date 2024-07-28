@@ -7,10 +7,10 @@ let cambioImg = true;
 botonImg.addEventListener('click', () => {
   if (cambioImg) {
     img.setAttribute('src', './assets/samma-icon.png');
-    titulo.innerHTML = "Ya me viste, haz clic"
+    titulo.innerHTML = "Haz clic para regresar a mi versión floral"
   } else {
     img.setAttribute('src', './assets/samma-ia.jpg');
-    titulo.innerHTML = "Haz clic para verme"
+    titulo.innerHTML = "Un clic y descubre a la flor detrás del código"
   }
   cambioImg = !cambioImg; // Alternar el estado
   
