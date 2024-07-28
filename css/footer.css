@@ -1,0 +1,18 @@
+/* footer */
+.footer{
+  background-color: var(--lila);
+}
+
+.footer-body{
+  font-weight: 500;
+  color: var(--violeta);
+}
+
+.footer-span{
+  font-family: "Mochiy Pop P One", sans-serif;
+  color: var(--morado);
+}
+
+.footer-link{
+  color: var(--morado);
+}
