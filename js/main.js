@@ -8,12 +8,15 @@ document.getElementById('switch').addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
   
   const footerIcon = document.querySelector('.footer-icon');
+  const bootstrapIcon = document.querySelector('#bootstrap-icon');
   const isDarkMode = document.body.classList.contains('dark-mode');
   
   if (isDarkMode) {
     footerIcon.setAttribute('src', './assets/figmaDark.png');
+    bootstrapIcon.setAttribute('src', './assets/icons/bootstrapDark.png');
   } else {
     footerIcon.setAttribute('src', './assets/figma.png');
+    bootstrapIcon.setAttribute('src', './assets/icons/bootstrap.png');
   }
 });
 
@@ -32,7 +35,7 @@ function setRandomPosition(element) {
   const delay = Math.random() * 10; // Añade un retraso aleatorio para cada flor
   element.style.left = `${randomX}px`;
   element.style.top = `${randomY}px`;
-  element.style.animationDelay = `${delay}s`;
+  // element.style.animationDelay = `${delay}s`; // retraso aleatorio
 };
 
 
