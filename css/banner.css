@@ -91,7 +91,6 @@
   color: var(--lila);
 }
 
-
 .icon__link{
   color: var(--morado);
   font-size: 35px;
@@ -100,4 +99,11 @@
 .icon__link:hover{
   color: var(--violeta);
   transform: scale(1.1);
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+  .banner {
+    padding-top: 2rem; 
+  }
 }
