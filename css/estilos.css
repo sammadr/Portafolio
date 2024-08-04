@@ -131,6 +131,10 @@ body.dark-mode .icon__link{
   color: var(--oscuro-subtitulo);
 }
 
+body.dark-mode .icon__link:hover{
+  color: var(--blanco);
+}
+
 body.dark-mode .boton {
   background-color: var(--oscuro-subtitulo);
   color: var(--morado);
@@ -257,6 +261,7 @@ body.dark-mode .darkModeSwitch span:last-child {
 /* header */
 header {
   background-color: var(--lila);
+  font-size: 22px;
 }
 
 .header__band {
