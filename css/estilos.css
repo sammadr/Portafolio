@@ -16,6 +16,9 @@
   --negro: #0D0D0D;
   --blanco: #fff;
 
+  --navBar-banner: linear-gradient(0deg, #BF9FB7 0%, #EEE4F2 41.5%);
+  --portafolio: linear-gradient(180deg, #BF9FB7 0%, #EEE4F2 37.5%);
+
   --oscuro-fondo: #2e2e2e;
   --oscuro-texto: #FFD6F1;
   --oscuro-text: #FF74EF;
@@ -36,6 +39,8 @@ body{
   overflow-x: hidden;
 }
 
+/* background: linear-gradient(0deg, #BF9FB7 0%, #EEE4F2 41.5%); */
+/* background: linear-gradient(180deg, #BF9FB7 0%, #EEE4F2 37.5%); */
 
 .titulo{
   color: var(--violeta);
@@ -112,7 +117,7 @@ body.dark-mode .nav-link.active{
 }
 
 body.dark-mode .banner{
-  background-color: var(--morado);
+  background: linear-gradient(0deg, var(--morado) 0%, var(--morado) 41.5%);
 }
 
 body.dark-mode .banner-titulo{
@@ -171,7 +176,7 @@ body.dark-mode .custom-tab-link.active{
 }
 
 body.dark-mode .portafolio{
-  background-color: var(--morado);
+  background: linear-gradient(0deg, var(--morado) 0%, var(--morado) 41.5%);
 }
 
 body.dark-mode .botonFiltro{
@@ -258,10 +263,11 @@ body.dark-mode .darkModeSwitch span:last-child {
 
 
 
+
 /* header */
 header {
   background-color: var(--lila);
-  font-size: 22px;
+  font-size: 19px;
 }
 
 .header__band {
@@ -320,7 +326,3 @@ header {
     flex-direction: column;
   }
 }
-
-
-
-

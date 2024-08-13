@@ -1,7 +1,8 @@
 /* Seccion portafolio */
 
 .portafolio{
-  background-color: var(--lila);
+  /* background-color: var(--lila); */
+  background: linear-gradient(180deg, #BF9FB7 0%, #EEE4F2 37.5%);
 }
 
 /* filtro */
