@@ -12,12 +12,12 @@
 }
 
 .sobre-parrafo {
-  color: var(--negro); /* Color del texto del párrafo */
+  color: var(--negro); 
 }
 
 .sobre img {
   width: 100%;
-  max-width: 150px; /* Tamaño máximo de la imagen */
+  max-width: 150px; 
 }
 
 .img-boton:hover{
@@ -41,15 +41,17 @@
     flex-direction: column; 
   }
   .sobre img {
-    max-width: 250px; /* Tamaño de la imagen para tablets */
+    max-width: 250px; 
     margin-bottom: 2rem;
     margin-left: 12rem;
   }
 }
 
+/* Tamaño de la imagen para desktops */
 @media (min-width: 992px) {
   .sobre img {
-    max-width: 350px; /* Tamaño de la imagen para desktops */
+    max-width: 350px; 
+    padding-right: 1rem;
   }
 }
 
